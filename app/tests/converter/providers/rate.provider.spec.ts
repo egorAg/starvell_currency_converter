@@ -1,13 +1,13 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { RateProviderService } from '../../../src/converter/services/rate-provider.service';
+import { RateProvider } from '../../../src/converter/providers/rate.provider';
 import { ConverterCacheService } from '../../../src/converter/services/converter-cache.service';
 import { CryptonimusApiService } from '../../../src/cryptonimus/services/cryptonimus-api/cryptonimus-api.service';
 import { ConfigService } from '@nestjs/config';
 
 import type { ICryptonimusRate } from '../../../src/cryptonimus/interfaces/cryptonimus-rate.interface';
 
-describe('RateProviderService', () => {
-    let service: RateProviderService;
+describe('RateProvider', () => {
+    let service: RateProvider;
     let cache: ConverterCacheService;
     let api: CryptonimusApiService;
 
@@ -35,14 +35,14 @@ describe('RateProviderService', () => {
     beforeEach(async () => {
         const module: TestingModule = await Test.createTestingModule({
             providers: [
-                RateProviderService,
+                RateProvider,
                 { provide: ConverterCacheService, useValue: mockCache },
                 { provide: CryptonimusApiService, useValue: mockApi },
                 { provide: ConfigService, useValue: mockConfig },
             ],
         }).compile();
 
-        service = module.get(RateProviderService);
+        service = module.get(RateProvider);
         cache = module.get(ConverterCacheService);
         api = module.get(CryptonimusApiService);
 

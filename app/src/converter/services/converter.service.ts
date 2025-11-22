@@ -1,10 +1,10 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { RateProviderService } from './rate-provider.service';
+import { RateProvider } from '../providers/rate.provider';
 
 @Injectable()
 export class ConverterService {
     constructor(
-        private readonly provider: RateProviderService,
+        private readonly provider: RateProvider,
     ) {}
 
     async getRate(from: string, to: string): Promise<number> {

@@ -38,7 +38,6 @@ describe('cacheFactory', () => {
         expect((memStore as any).opts.ttl).toBe(900000);
         expect((redisStore as any).opts.ttl).toBe(900000);
 
-        // внутри второго keyv должен лежать KeyvRedis
         expect((redisStore as any).opts.store).toBeInstanceOf(KeyvRedis);
     });
 

@@ -1,18 +1,18 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { ConverterService } from '../../../src/converter/services/converter.service';
-import { RateProviderService } from '../../../src/converter/services/rate-provider.service';
+import { RateProvider } from '../../../src/converter/providers/rate.provider';
 import { NotFoundException } from '@nestjs/common';
 
 describe('ConverterService', () => {
     let service: ConverterService;
-    let provider: RateProviderService;
+    let provider: RateProvider;
 
     beforeEach(async () => {
         const module: TestingModule = await Test.createTestingModule({
             providers: [
                 ConverterService,
                 {
-                    provide: RateProviderService,
+                    provide: RateProvider,
                     useValue: {
                         getRates: jest.fn(),
                     },
@@ -21,7 +21,7 @@ describe('ConverterService', () => {
         }).compile();
 
         service = module.get<ConverterService>(ConverterService);
-        provider = module.get<RateProviderService>(RateProviderService);
+        provider = module.get<RateProvider>(RateProvider);
     });
 
     describe('getRate', () => {

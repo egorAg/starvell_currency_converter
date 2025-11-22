@@ -1,12 +1,12 @@
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 
-import { ConverterCacheService } from './converter-cache.service';
+import { ConverterCacheService } from '../services/converter-cache.service';
 import { CryptonimusApiService } from '../../cryptonimus/services/cryptonimus-api/cryptonimus-api.service';
 import type { ICryptonimusRate } from '../../cryptonimus/interfaces/cryptonimus-rate.interface';
 
 @Injectable()
-export class RateProviderService {
+export class RateProvider {
     private readonly ttl: number;
 
     constructor(
