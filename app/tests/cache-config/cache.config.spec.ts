@@ -1,6 +1,6 @@
 import Keyv from 'keyv';
 import KeyvRedis, {RedisClientType} from '@keyv/redis';
-import {cacheConfigFactory} from "./cache-config.factory";
+import {cacheConfigFactory} from "../../src/cache-config/cache-config.factory";
 
 describe('cacheFactory', () => {
     const mockConfig = {

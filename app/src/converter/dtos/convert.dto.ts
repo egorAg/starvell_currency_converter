@@ -1,7 +1,7 @@
 import { IsEnum, IsNumber } from 'class-validator';
 import { Type } from 'class-transformer';
 import { ApiProperty } from '@nestjs/swagger';
-import { CurrencyCode } from '../../../shared/currency-code.enum';
+import { CurrencyCode } from '../../shared/currency-code.enum';
 
 export class ConvertDto {
     @ApiProperty({

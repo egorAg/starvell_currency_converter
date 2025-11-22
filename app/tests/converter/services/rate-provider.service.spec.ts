@@ -1,10 +1,10 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { RateProviderService } from './rate-provider.service';
-import { ConverterCacheService } from '../converter-cache/converter-cache.service';
-import { CryptonimusApiService } from '../../../cryptonimus/services/cryptonimus-api/cryptonimus-api.service';
+import { RateProviderService } from '../../../src/converter/services/rate-provider.service';
+import { ConverterCacheService } from '../../../src/converter/services/converter-cache.service';
+import { CryptonimusApiService } from '../../../src/cryptonimus/services/cryptonimus-api/cryptonimus-api.service';
 import { ConfigService } from '@nestjs/config';
 
-import type { ICryptonimusRate } from '../../../cryptonimus/interfaces/cryptonimus-rate.interface';
+import type { ICryptonimusRate } from '../../../src/cryptonimus/interfaces/cryptonimus-rate.interface';
 
 describe('RateProviderService', () => {
     let service: RateProviderService;

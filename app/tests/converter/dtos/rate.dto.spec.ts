@@ -1,7 +1,7 @@
 import { plainToInstance } from 'class-transformer';
 import { validate } from 'class-validator';
-import { RateDto } from './rate.dto';
-import { CurrencyCode } from '../../../shared/currency-code.enum';
+import { RateDto } from '../../../src/converter/dtos/rate.dto';
+import { CurrencyCode } from '../../../src/shared/currency-code.enum';
 
 describe('RateDto', () => {
     it('валидный DTO', async () => {

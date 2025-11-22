@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 
-import { ConverterCacheService } from '../converter-cache/converter-cache.service';
-import { CryptonimusApiService } from '../../../cryptonimus/services/cryptonimus-api/cryptonimus-api.service';
-import type { ICryptonimusRate } from '../../../cryptonimus/interfaces/cryptonimus-rate.interface';
+import { ConverterCacheService } from './converter-cache.service';
+import { CryptonimusApiService } from '../../cryptonimus/services/cryptonimus-api/cryptonimus-api.service';
+import type { ICryptonimusRate } from '../../cryptonimus/interfaces/cryptonimus-rate.interface';
 
 @Injectable()
 export class RateProviderService {

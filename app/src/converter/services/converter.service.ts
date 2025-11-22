@@ -1,5 +1,5 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { RateProviderService } from '../rate-provider/rate-provider.service';
+import { RateProviderService } from './rate-provider.service';
 
 @Injectable()
 export class ConverterService {

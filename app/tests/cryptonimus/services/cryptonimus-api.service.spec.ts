@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { CryptonimusApiService } from './cryptonimus-api.service';
+import { CryptonimusApiService } from '../../../src/cryptonimus/services/cryptonimus-api/cryptonimus-api.service';
 import { ConfigService } from '@nestjs/config';
 import axios from 'axios';
 import { HttpException } from '@nestjs/common';

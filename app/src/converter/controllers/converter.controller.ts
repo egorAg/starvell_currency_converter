@@ -1,8 +1,8 @@
 import { Controller, Get, Query } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiOkResponse, ApiBadRequestResponse, ApiNotFoundResponse } from '@nestjs/swagger';
-import { ConverterService } from '../services/converter/converter.service';
-import { RateDto } from '../dtos/rate/rate.dto';
-import { ConvertDto } from '../dtos/convert/convert.dto';
+import { ConverterService } from '../services/converter.service';
+import { RateDto } from '../dtos/rate.dto';
+import { ConvertDto } from '../dtos/convert.dto';
 
 @ApiTags('converter')
 @Controller('converter')

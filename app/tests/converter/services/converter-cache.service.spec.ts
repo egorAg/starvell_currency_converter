@@ -1,8 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { ConverterCacheService } from './converter-cache.service';
+import { ConverterCacheService } from '../../../src/converter/services/converter-cache.service';
 import { CACHE_MANAGER } from '@nestjs/cache-manager';
 import type { Cache } from 'cache-manager';
-import type { ICryptonimusRate } from '../../../cryptonimus/interfaces/cryptonimus-rate.interface';
+import type { ICryptonimusRate } from '../../../src/cryptonimus/interfaces/cryptonimus-rate.interface';
 
 describe('ConverterCacheService', () => {
     let service: ConverterCacheService;

@@ -1,10 +1,10 @@
 import {Test, TestingModule} from '@nestjs/testing';
-import {ConverterController} from './converter.controller';
-import {ConverterService} from '../services/converter/converter.service';
-import {RateDto} from '../dtos/rate/rate.dto';
-import {ConvertDto} from '../dtos/convert/convert.dto';
+import {ConverterController} from '../../../src/converter/controllers/converter.controller';
+import {ConverterService} from '../../../src/converter/services/converter.service';
+import {RateDto} from '../../../src/converter/dtos/rate.dto';
+import {ConvertDto} from '../../../src/converter/dtos/convert.dto';
 import {NotFoundException} from '@nestjs/common';
-import {CurrencyCode} from "../../shared/currency-code.enum";
+import {CurrencyCode} from "../../../src/shared/currency-code.enum";
 
 describe('ConverterController', () => {
     let controller: ConverterController;

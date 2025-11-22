@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { ConverterService } from './converter.service';
-import { RateProviderService } from '../rate-provider/rate-provider.service';
+import { ConverterService } from '../../../src/converter/services/converter.service';
+import { RateProviderService } from '../../../src/converter/services/rate-provider.service';
 import { NotFoundException } from '@nestjs/common';
 
 describe('ConverterService', () => {

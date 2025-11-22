@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 
-import { ConverterService } from './services/converter/converter.service';
-import { RateProviderService } from './services/rate-provider/rate-provider.service';
-import { ConverterCacheService } from './services/converter-cache/converter-cache.service';
+import { ConverterService } from './services/converter.service';
+import { RateProviderService } from './services/rate-provider.service';
+import { ConverterCacheService } from './services/converter-cache.service';
 
 import { CryptonimusModule } from '../cryptonimus/cryptonimus.module';
 import { ConverterController } from './controllers/converter.controller';

@@ -1,6 +1,6 @@
 import { IsEnum } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
-import { CurrencyCode } from '../../../shared/currency-code.enum';
+import { CurrencyCode } from '../../shared/currency-code.enum';
 
 export class RateDto {
     @ApiProperty({

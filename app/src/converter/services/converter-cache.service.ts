@@ -1,6 +1,6 @@
 import {Inject, Injectable } from '@nestjs/common';
 import type { Cache } from 'cache-manager';
-import type { ICryptonimusRate } from '../../../cryptonimus/interfaces/cryptonimus-rate.interface';
+import type { ICryptonimusRate } from '../../cryptonimus/interfaces/cryptonimus-rate.interface';
 import {CACHE_MANAGER} from "@nestjs/cache-manager";
 
 @Injectable()
